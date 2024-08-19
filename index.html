@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoked Workout App</title>
+
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Import UIKit CSS -->
     <link href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" rel="stylesheet">
+
+    <!-- Import Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
@@ -15,29 +26,86 @@
     <nav class="uk-navbar-container uk-navbar-transparent uk-padding-small" uk-navbar>
         <div class="uk-navbar-left">
             <a class="uk-navbar-item uk-logo" href="#">
-                <img src="/assets/imgs/logo.png" alt="Logo" style="height: 30px;">
+                <img src="/assets/imgs/appicon.jpg" alt="Yoked Logo">
             </a>
         </div>
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
-                <li><a href="#">iPhone</a></li>
-                <li><a href="#">Watch</a></li>
-                <li><a href="#">iPadOS</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Future</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero-section">
-        <h1 class="uk-heading-medium">Delightfully Simple Interval Timer<br>for HIIT workouts</h1>
-        <div class="iphone-frame">
-            <img src="/assets/imgs/iphone_frame.webp" alt="iPhone Frame">
-            <video autoplay loop muted>
-                <source src="/assets/imgs/App.mp4" type="video/mp4">
+        <h1 class="hero-title">Measure your <span>progress</span>, track every <span>milestone</span>!</h1>
+        <div class="iphone-mockup">
+            <img class="iphone-frame" src="/assets/imgs/iphone_frame.webp" alt="iPhone Frame">
+            <video autoplay loop muted class="iphone-video">
+                <source src="/assets/imgs/heroRecording.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
+
+    <!-- About Section -->
+    <section class="dark-section">
+        <div class="about-section uk-container-large uk-margin-auto">
+            <div class="uk-grid-large uk-grid-row-xtra uk-child-width-1-3@s" uk-grid>
+                <div>
+                    <h3>What</h3>
+                    <p>Yoked is a workout journal designed to track your weight training progress effortlessly.</p>
+                </div>
+                <div>
+                    <h3>Why</h3>
+                    <p>To offer a simplified, journal-like experience without the complexity or paywalls common in other
+                        fitness tracking apps.</p>
+                </div>
+                <div>
+                    <h3>Goals</h3>
+                    <p>Our goal is to deliver a minimalistic, user-friendly app that provides clear visualizations of
+                        your progress, all at an affordable price.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="/assets/imgs/feature1.webp" alt="Feature 1">
+                <h3 class="feature-title">Log Your Workouts</h3>
+                <p class="feature-description">Easily log your workouts and track your progress over time. Yoked
+                    makes it easy to record your exercises, sets, reps, and weights.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/assets/imgs/feature2.webp" alt="Feature 2">
+                <h3 class="feature-title">Track Your Progress</h3>
+                <p class="feature-description">See how you are progressing over time with detailed graphs and
+                    statistics. Yoked helps you stay motivated and reach your fitness goals.</p>
+            </div>
+            <div class="feature-card">
+                <img src="/assets/imgs/feature3.webp" alt="Feature 3">
+                <h3 class="feature-title">Set New Goals</h3>
+                <p class="feature-description">Set new fitness goals and track your progress as you work towards
+                    them. Yoked helps you stay focused and motivated.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-content">
+            <div class="img-container">
+                <img src="/assets/imgs/appicon.jpg" alt="Yoked Logo">
+            </div>
+            <p>Copyright &copy; 2024 Yoked. <br /> All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- UIKit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
