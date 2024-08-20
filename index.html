@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yoked Workout App</title>
+    <title>No BS Workout App | Yoked</title>
 
     <!-- Import Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,15 @@
     <!-- Import UIKit CSS -->
     <link href="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/css/uikit.min.css" rel="stylesheet">
 
+    <!-- Import Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Import GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- Import GSAP ScrollToPlugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+
+
     <!-- Import Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
@@ -25,15 +34,15 @@
     <!-- Navigation Bar -->
     <nav class="uk-navbar-container uk-navbar-transparent uk-padding-small" uk-navbar>
         <div class="uk-navbar-left">
-            <a class="uk-navbar-item uk-logo" href="#">
+            <a class="uk-navbar-item uk-logo" href="index.html">
                 <img src="/assets/imgs/appicon.jpg" alt="Yoked Logo">
             </a>
         </div>
         <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Future</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tags">Features</a></li>
+                <li><a href="#faqs">FAQs</a></li>
             </ul>
         </div>
     </nav>
@@ -52,7 +61,7 @@
 
     <!-- About Section -->
     <section class="dark-section">
-        <div class="about-section uk-container-large uk-margin-auto">
+        <div class="about-section uk-container-large uk-margin-auto" id="about">
             <div class="uk-grid-large uk-grid-row-xtra uk-child-width-1-3@s" uk-grid>
                 <div>
                     <h3>What</h3>
@@ -70,38 +79,88 @@
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
-        <h2 class="section-title">Features</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <img src="/assets/imgs/feature1.webp" alt="Feature 1">
-                <h3 class="feature-title">Log Your Workouts</h3>
-                <p class="feature-description">Easily log your workouts and track your progress over time. Yoked
-                    makes it easy to record your exercises, sets, reps, and weights.</p>
-            </div>
-            <div class="feature-card">
-                <img src="/assets/imgs/feature2.webp" alt="Feature 2">
-                <h3 class="feature-title">Track Your Progress</h3>
-                <p class="feature-description">See how you are progressing over time with detailed graphs and
-                    statistics. Yoked helps you stay motivated and reach your fitness goals.</p>
-            </div>
-            <div class="feature-card">
-                <img src="/assets/imgs/feature3.webp" alt="Feature 3">
-                <h3 class="feature-title">Set New Goals</h3>
-                <p class="feature-description">Set new fitness goals and track your progress as you work towards
-                    them. Yoked helps you stay focused and motivated.</p>
+        <!-- Tags Section -->
+        <div class="tags-section" id="tags">
+            <h2 class="section-title">Perfect for Working Out at Home, at the Gym, or on the Go</h2>
+            <div class="tags-grid">
+                <div class="tag-box">
+                    <p>HITT</p>
+                </div>
+                <div class="tag-box">
+                    <p>CrossFit</p>
+                </div>
+                <div class="tag-box">
+                    <p>Strength Training</p>
+                </div>
+                <div class="tag-box">
+                    <p>Bodybuilding</p>
+                </div>
+                <div class="tag-box">
+                    <p>Weight Lifting</p>
+                </div>
+                <div class="tag-box">
+                    <p>Power Lifting</p>
+                </div>
+                <div class="tag-box">
+                    <p>Circuit Training</p>
+                </div>
+                <div class="tag-box">
+                    <p>Running</p>
+                </div>
+                <div class="tag-box">
+                    <p>Cycling</p>
+                </div>
+                <div class="tag-box">
+                    <p>Swimming</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="faq-section" id="faqs">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fa fa-plus faq-icon"></i>
+                    <h3>Can I save my timers?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, you can save your timers for future use and easily access them from your saved timers
+                        list.
+                    </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fa fa-plus faq-icon"></i>
+                    <h3>What type of workouts can I use Yoked for?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>Yoked is great for a variety of workouts, including Functional Fitness, HIIT, Tabata, Circuit
+                        Training, Boxing, Running, and more.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fa fa-plus faq-icon"></i>
+                    <h3>Are notifications required for Yoked to run in the background?</h3>
+                </div>
+                <div class="faq-answer">
+                    <p>No, Yoked runs efficiently in the background without the need for notifications, ensuring
+                        uninterrupted workout tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="footer-content">
             <div class="img-container">
-                <img src="/assets/imgs/appicon.jpg" alt="Yoked Logo">
+                <img src="/assets/imgs/word_logo.png" alt="Yoked Logo">
             </div>
             <p>Copyright &copy; 2024 Yoked. <br /> All rights reserved.</p>
         </div>
@@ -111,6 +170,9 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
 
+    <!-- Custom JS -->
+    <script src="/assets/js/scrollSmooth.js"></script>
+    <script src="/assets/js/faq-section.js"></script>
 </body>
 
 </html>

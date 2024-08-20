@@ -10,9 +10,17 @@ a {
   text-decoration: none;
 }
 
+/** NAVBAR STYLING **/
+
 .uk-navbar-container {
+  position: sticky;
+  top: 0;
+  padding: 10px 3%;
   background-color: #fff;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  z-index: 999;
 }
 
 .uk-navbar-container .uk-navbar-nav li {
@@ -30,7 +38,7 @@ a {
 }
 
 .uk-navbar-container .uk-logo img {
-  max-width: 80px;
+  max-width: 70px;
   border-radius: 10px;
 }
 
@@ -66,26 +74,27 @@ a {
 
 .iphone-mockup .iphone-frame {
   position: relative;
-  width: 100%;
+  width: 102%;
   z-index: 1;
   filter: contrast(0.5);
 }
 
 .iphone-mockup .iphone-video {
   position: absolute;
-  top: 2px;
+  top: 0cap;
   left: 2px;
   width: 98%;
-  height: 99%;
+  height: 100%;
   object-fit: cover;
   z-index: 0;
-  border-radius: 50px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 70px;
 }
 
 /** ABOUT SECTION **/
 
 .dark-section {
-  height: 200svh;
+  height: 130svh;
   background-color: #000;
   padding-top: 35%;
   margin-top: -30%;
@@ -94,7 +103,7 @@ a {
 }
 
 .about-section {
-  padding: 50px 0;
+  padding: 2% 0 20% 0;
   text-align: center;
 }
 
@@ -110,37 +119,155 @@ a {
   font-size: 22px;
 }
 
-/** FOOTER SECTION **/
-.footer-section {
-  background-color: #000;
+/** TAGS SECTION **/
+
+.tags-section {
+  min-height: 100svh;
   padding: 50px 0;
   text-align: center;
 }
 
+.tags-section h2 {
+  max-width: 42%;
+  margin: 0 auto;
+  font-size: 52px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tags-section .tags-grid {
+  max-width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2%;
+  flex-wrap: wrap;
+  margin: 50px auto;
+}
+
+.tags-section .tags-grid .tag-box {
+  background-color: #fff;
+  padding: 10px 25px;
+  margin: 20px 0;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.tags-section .tags-grid .tag-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.3);
+  cursor: pointer;
+}
+
+.tags-section .tags-grid .tag-box p {
+  font-size: 22px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+/** FAQ SECTION **/
+
+.faq-section {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  text-align: center;
+}
+
+.faq-section .section-title {
+  font-size: 52px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5%;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+  cursor: pointer;
+  padding: 10px 0;
+  transition: all 0.5s ease;
+}
+
+.faq-question h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+.faq-icon {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.faq-answer p {
+  font-size: 20px;
+  color: #333;
+  margin: 0 0 0 40px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+/** FOOTER SECTION **/
+
+.footer-section {
+  background-color: #000;
+  padding: 50px 5%;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
 .footer-section .footer-content {
-  max-width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 }
 
 .footer-section .footer-content .img-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
 }
 
 .footer-section .footer-content .img-container img {
-  width: 150px;
-  border-radius: 10px;
-  margin: 0 10px;
+  width: 280px;
 }
 
 .footer-section .footer-content p {
   color: #fff;
-  font-size: 16px;
-}
-
-.footer-section .footer-content .social-icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  font-size: 18px;
 }
