@@ -24,7 +24,6 @@
     <!-- Import GSAP ScrollToPlugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
 
-
     <!-- Import Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
@@ -52,7 +51,9 @@
         <h1 class="hero-title">Measure your <span>progress</span>, track every <span>milestone</span>!</h1>
         <div class="iphone-mockup">
             <img class="iphone-frame" src="/assets/imgs/iphone_frame.webp" alt="iPhone Frame">
-            <video autoplay loop muted class="iphone-video">
+            <div id="video-overlay" class="video-overlay"></div>
+            <video autoplay loop muted class="iphone-video" oncanplay="removeOverlay()">
+                <source src="/assets/imgs/heroRecording.webm" type="video/webm">
                 <source src="/assets/imgs/heroRecording.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -127,8 +128,7 @@
                     <h3>Can I save my timers?</h3>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes, you can save your timers for future use and easily access them from your saved timers
-                        list.
+                    <p>Yes, you can save your timers for future use and easily access them from your saved timers list.
                     </p>
                 </div>
             </div>
@@ -155,7 +155,6 @@
         </div>
     </section>
 
-
     <!-- Footer Section -->
     <footer class="footer-section">
         <div class="footer-content">
@@ -173,6 +172,15 @@
     <!-- Custom JS -->
     <script src="/assets/js/scrollSmooth.js"></script>
     <script src="/assets/js/faq-section.js"></script>
+    <script>
+        function removeOverlay() {
+            const overlay = document.getElementById('video-overlay');
+            if (overlay) {
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.remove(), 500);
+            }
+        }
+    </script>
 </body>
 
 </html>

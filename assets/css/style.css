@@ -91,6 +91,17 @@ a {
   border-top-right-radius: 70px;
 }
 
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 98%;
+  height: 100%;
+  background-color: #000;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 70px;
+}
+
 /** ABOUT SECTION **/
 
 .dark-section {
